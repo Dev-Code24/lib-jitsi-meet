@@ -20,6 +20,7 @@
  * callback is going to receive one parameter which is going to be JS error
  * object with a reason for failure in it.
  */
+console.log(`Out of function {createConnectionExternally}`)
 function createConnectionExternally( // eslint-disable-line no-unused-vars
         webserviceUrl,
         successCallback,
@@ -30,7 +31,7 @@ function createConnectionExternally( // eslint-disable-line no-unused-vars
     }
 
     var HTTP_STATUS_OK = 200;
-
+    console.log(`In createConnectionExternally function`)
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
