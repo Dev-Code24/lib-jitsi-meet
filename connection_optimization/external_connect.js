@@ -20,7 +20,6 @@
  * callback is going to receive one parameter which is going to be JS error
  * object with a reason for failure in it.
  */
-console.log(`Out of function {createConnectionExternally}`)
 function createConnectionExternally( // eslint-disable-line no-unused-vars
         webserviceUrl,
         successCallback,
@@ -42,6 +41,7 @@ function createConnectionExternally( // eslint-disable-line no-unused-vars
             if (xhttp.status == HTTP_STATUS_OK) {
                 try {
                     var data = JSON.parse(xhttp.responseText);
+                    console.log(`data after xhr req ${data}`);
                     successCallback(data);
                 } catch (e) {
                     error_callback(e);
